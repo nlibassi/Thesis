@@ -1,0 +1,14 @@
+import glob, os
+
+def renameShapefile(path, oldName, newName): 
+
+	"""changes name of shapefile or similar multi-file object
+
+		path given beginning with forward slash
+
+		old and new names given without extensions
+	"""
+
+	for fname in glob.glob(path + '//' + oldName + '.*'):
+		ext = fname.rsplit('.')[-1]
+		os.rename(fname, path + newName + '.' + ext)

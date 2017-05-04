@@ -1,0 +1,17 @@
+infile = '/home/nlibassi/Geodesy/Thesis/Project/ProfileData/pr0000106.txt' 
+outfile = '/home/nlibassi/Geodesy/Thesis/Project/ProfileData/pr0000106_ellHt.csv' 
+with open(infile, 'r') as f, open(outfile, 'a') as out:
+	for line in f:
+		nline = line.split()
+		if nline:
+			#out.write(float(nline[0].strip(' ')))
+			d = nline[0].strip()
+			out.write(float(d))
+			#print float(nline[0].strip())
+			out.write(', ')
+			#print ', '
+			#out.write(float(nline[1].strip()) + 36.6975)
+			#print float(nline[1].strip()) + 36.6975
+			#out.write('\n')
+			#print ('\n')
+	

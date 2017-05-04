@@ -1,0 +1,17 @@
+#ran in ArcMap Python Window
+
+>>> arcpy.env.workspace = (r"C:\Users\Administrator\Desktop\Parsel\tr_parsel.gdb")
+>>> mxd = arcpy.mapping.MapDocument("CURRENT")
+>>> layer_list = arcpy.mapping.ListLayers(mxd)
+>>> parsel_lyr = layer_list[3]
+>>> im_layer = layer_list[1]
+>>> fclist = arcpy.ListFeatureClasses()
+>>> out_path = (r"K:\Readonly\Parsel_Screenshots")
+>>> for fc in fclist:
+...     parsel_lyr.name = fc + " Parsel"
+...     arcpy.RefreshTOC()
+...     parsel_lyr.replaceDataSource(r"C:\Users\Administrator\Desktop\Parsel\tr_parsel.gdb", "FILEGDB_WORKSPACE", fc)
+...     im_layer.definitionQuery = 'ILADI = ' + "'" + fc + "'"
+...     mxd.dataDrivenPages.refresh()
+...     arcpy.RefreshActiveView()
+... mxd.dataDrivenPages.exportToPDF(out_path + "/" + str(fc) + "_Parsel" + ".pdf")

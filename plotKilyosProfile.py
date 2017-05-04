@@ -1,0 +1,45 @@
+import matplotlib.pyplot as plt
+
+f01 = '/home/nlibassi/Geodesy/Thesis/Readonly/FromEmreHoca/Kilyos profiller/pr0000106.txt'
+
+f16 = '/home/nlibassi/Geodesy/Thesis/Project/ProfileData/pr0001609.csv'
+
+dist = []
+elev16 = []
+elev01 = []
+
+with open(f16, 'r') as f:
+	f.next()
+	for line in f:
+		if line.split(',')[2] != '\n':
+			dist.append(float(line.split(',')[2]))
+		else:
+			dist.append(None)
+		if line.split(',')[3] != '\n':
+			elev16.append(float(line.split(',')[3]))
+		else:
+			elev16.append(None)
+
+
+with open(f01, 'r') as f:
+	for line in f:
+		if line.split():
+			d1 = line.split()[1].strip()
+			d2 = float(d1)
+			elev01.append(d2)
+		else:
+			elev01.append(None)
+
+"""
+print dist[:50]
+print elev16[:50]
+print elev01[:50]
+print len(dist), len(elev01)
+"""
+
+plt.plot(dist, elev01)
+plt.plot(dist, elev16)
+plt.xlabel('Distance from Benchmark (m)')
+plt.ylabel('Depth (m)')
+plt.legend(['June 2001', 'Sept 2016'], loc='upper right')
+plt.show()

@@ -1,0 +1,23 @@
+import processing
+
+
+layer = iface.legendInterface().layers()[0]  #if only one layer or find better way to do this
+features = processing.features(layer)
+
+#OR
+
+count = 0
+depths = []
+for feature in layer.getFeatures():  #getFeatures() returns an interator of the layer's features
+	depths.append([count, feature.attributes()[-2]])
+	count +=1
+	
+
+#To get field by name rather than index:
+
+idx = layer.fieldNameIndex('name')
+
+for feature in layer.getFeatures():
+	depths.append(feature.attributes()[idx])
+	
+#how to write to a field?

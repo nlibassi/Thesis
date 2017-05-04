@@ -1,0 +1,273 @@
+Python Console 
+Use iface to access QGIS API interface or Type help(iface) for more info
+layer = qgis.utils.iface.activeLayer()
+layer.name
+<built-in method name of QgsVectorLayer object at 0x7f1b8c59b770>
+layer.name()
+u'20170328_Profile_Shoreline_wGNSSraw_ITRF96'
+for feature in layer.selected():
+	print feature.attributes()
+[416576.143, 4568464.339, u'waterline63', 416576.143, 4568464.339, 36.573, u'checkantht', 186L, 187L, 1L, 0.0016395962, -0.006561393, -16.5813049021, 1L, 2.62, 0L, 1.8040695129e-05, 9.206839161e-06, 1.0479545046e-05, 65L, 67L, 58L, 4L, 2000L, 210L, 3L, 0.7480200829, 1.3691806662, 8L, 7L, 0L, 0L, 0L, 0L, 36.573, NULL, u'runup1']
+[416686.146, 4568440.275, u'waterline27', 416686.146, 4568440.275, 36.792, u'checkantht', 150L, 151L, 1L, 0.0014342852, -0.0052459401, -16.362085816, 1L, 2.62, 0L, 1.7802382816e-05, 5.975785377e-06, 1.0342e-05, 65L, 69L, 51L, 4L, 2000L, 174L, 3L, 0.703003705, 1.3433826606, 7L, 8L, 0L, 0L, 0L, 0L, 36.792, NULL, u'runup2']
+[416566.811, 4568465.638, u'waterline66', 416566.811, 4568465.638, 36.574, u'checkantht', 189L, 190L, 1L, 0.0016503296, -0.0066728837, -16.5798751874, 1L, 2.62, 0L, 1.5451948473e-05, 7.138538363e-06, 9.036e-06, 64L, 66L, 56L, 4L, 2000L, 213L, 3L, 0.6957854914, 1.2667831655, 8L, 7L, 0L, 0L, 0L, 0L, 36.574, NULL, u'runup3']
+[416677.515, 4568442.865, u'waterline30', 416677.515, 4568442.865, 36.756, u'checkantht', 153L, 154L, 1L, 0.0014567167, -0.0053492439, -16.397739021, 1L, 2.62, 0L, 1.7953812393e-05, 6.343480337e-06, 1.031e-05, 66L, 69L, 51L, 4L, 2000L, 177L, 3L, 0.7166443199, 1.362226949, 7L, 8L, 0L, 0L, 0L, 0L, 36.756, NULL, u'runup4']
+[416668.033, 4568445.374, u'waterline33', 416668.033, 4568445.374, 36.759, u'checkantht', 156L, 157L, 1L, 0.0014783297, -0.0054626925, -16.3951334862, 1L, 2.62, 0L, 1.7715138908e-05, 6.201593582e-06, 1.0208e-05, 65L, 69L, 50L, 4L, 2000L, 180L, 3L, 0.7015489745, 1.3333049533, 7L, 8L, 0L, 0L, 0L, 0L, 36.759, NULL, u'runup5']
+[416658.534, 4568446.593, u'waterline36', 416658.534, 4568446.593, 36.827, u'checkantht', 159L, 160L, 1L, 0.0014883241, -0.0055761679, -16.3271113849, 1L, 2.62, 0L, 1.7554228668e-05, 6.239e-06, 1.1386106113e-05, 65L, 64L, 44L, 4L, 2000L, 183L, 3L, 0.7453286095, 1.331227283, 7L, 7L, 0L, 0L, 0L, 0L, 36.827, NULL, u'runup6']
+[416763.9540000001, 4568407.417, u'waterline', 416763.954, 4568407.417, 36.712, u'checkantht', 123L, 124L, 1L, 0.0011464774, -0.0043133348, -16.4425523946, 1L, 2.62, 0L, 1.3182887161e-05, 5.428683499e-06, 9.521230153e-06, 64L, 65L, 48L, 4L, 2000L, 147L, 3L, 0.6537541449, 1.1397657112, 8L, 8L, 0L, 0L, 0L, 0L, 36.712, NULL, u'runup7']
+[416649.687, 4568449.177, u'waterline39', 416649.687, 4568449.177, 36.703, u'checkantht', 162L, 163L, 1L, 0.0015106791, -0.0056820469, -16.4507374505, 1L, 2.62, 0L, 1.7248660919e-05, 6.027770664e-06, 1.004527426e-05, 64L, 69L, 50L, 4L, 2000L, 186L, 3L, 0.7001948497, 1.3208849761, 7L, 8L, 0L, 0L, 0L, 0L, 36.703, NULL, u'runup8']
+[416755.537, 4568411.494, u'waterline3', 416755.537, 4568411.494, 36.629, u'checkantht', 126L, 127L, 1L, 0.0011823174, -0.0044142871, -16.5255294913, 1L, 2.62, 0L, 1.4927907105e-05, 6.194103715e-06, 1.0668456457e-05, 64L, 65L, 48L, 4L, 2000L, 150L, 3L, 0.6536591141, 1.1384927833, 8L, 8L, 0L, 0L, 0L, 0L, 36.629, NULL, u'runup9']
+[416640.181, 4568450.017, u'waterline42', 416640.181, 4568450.017, 36.792, u'checkantht', 165L, 166L, 1L, 0.0015172652, -0.0057955636, -16.3619767512, 1L, 2.62, 0L, 1.8531457018e-05, 8.087e-06, 1.0317147562e-05, 67L, 70L, 51L, 4L, 2000L, 189L, 3L, 0.7460981992, 1.3840504876, 7L, 7L, 0L, 0L, 0L, 0L, 36.792, NULL, u'runup10']
+[416747.155, 4568415.503, u'waterline6', 416747.155, 4568415.503, 36.665, u'checkantht', 129L, 130L, 1L, 0.0012175469, -0.0045148158, -16.4891010089, 1L, 2.62, 0L, 1.5079612931e-05, 6.436397591e-06, 1.0645732258e-05, 64L, 65L, 48L, 4L, 2000L, 153L, 3L, 0.6535855568, 1.1370353686, 8L, 8L, 0L, 0L, 0L, 0L, 36.665, NULL, u'runup11']
+[416631.73, 4568451.401, u'waterline45', 416631.73, 4568451.401, 36.742, u'checkantht', 168L, 169L, 1L, 0.0015288498, -0.0058965544, -16.4123383235, 1L, 2.62, 0L, 1.690937326e-05, 6.045500142e-06, 9.874109355e-06, 64L, 68L, 49L, 4L, 2000L, 192L, 3L, 0.69880072, 1.3049280556, 7L, 8L, 0L, 0L, 0L, 0L, 36.742, NULL, u'runup12']
+[416738.91, 4568420.184, u'waterline9', 416738.91, 4568420.184, 36.646, u'checkantht', 132L, 133L, 1L, 0.0012588468, -0.0046138139, -16.5084172107, 1L, 2.62, 0L, 1.3438187893e-05, 5.997647591e-06, 9.432545372e-06, 65L, 65L, 48L, 4L, 2000L, 156L, 3L, 0.6674335258, 1.1496761725, 8L, 8L, 0L, 0L, 0L, 0L, 36.646, NULL, u'runup13']
+[416623.011, 4568452.417, u'waterline48', 416623.011, 4568452.417, 36.768, u'checkantht', 171L, 172L, 1L, 0.0015371011, -0.006000695, -16.3858720837, 1L, 2.62, 0L, 1.8000187003e-05, 7.878558766e-06, 1.012088113e-05, 67L, 69L, 50L, 4L, 2000L, 195L, 3L, 0.7453201956, 1.3675221433, 7L, 7L, 0L, 0L, 0L, 0L, 36.768, NULL, u'runup14']
+[416731.013, 4568424.17, u'waterline12', 416731.013, 4568424.17, 36.66, u'checkantht', 135L, 136L, 1L, 0.0012939177, -0.0047085558, -16.4937099285, 1L, 2.62, 0L, 1.8639068809e-05, 6.196846129e-06, 1.0706454769e-05, 66L, 70L, 52L, 4L, 2000L, 159L, 3L, 0.7212284606, 1.3783308808, 7L, 8L, 0L, 0L, 0L, 0L, 36.66, NULL, u'runup15']
+[416613.581, 4568454.485, u'waterline51', 416613.581, 4568454.485, 36.734, u'checkantht', 174L, 175L, 1L, 0.0015547424, -0.0061134623, -16.4202288471, 1L, 2.62, 0L, 1.7734e-05, 6.802e-06, 9.136543392e-06, 64L, 66L, 51L, 4L, 2000L, 198L, 3L, 0.6782477349, 1.2187926478, 8L, 8L, 0L, 0L, 0L, 0L, 36.734, NULL, u'runup16']
+[416721.856, 4568428.636, u'waterline15', 416721.856, 4568428.636, 36.667, u'checkantht', 138L, 139L, 1L, 0.001333178, -0.0048183915, -16.4870646403, 1L, 2.62, 0L, 1.8182902937e-05, 5.902074883e-06, 1.0571086772e-05, 65L, 70L, 52L, 4L, 2000L, 162L, 3L, 0.705733583, 1.3534610905, 7L, 8L, 0L, 0L, 0L, 0L, 36.667, NULL, u'runup17']
+[416604.876, 4568457.296, u'waterline54', 416604.876, 4568457.296, 36.701, u'checkantht', 177L, 178L, 1L, 0.0015791529, -0.0062176905, -16.4529648253, 1L, 2.62, 0L, 1.7844527069e-05, 1.0163e-05, 9.726259333e-06, 68L, 70L, 61L, 4L, 2000L, 201L, 3L, 0.7774769562, 1.4333490342, 8L, 6L, 0L, 0L, 0L, 0L, 36.701, NULL, u'runup18']
+[416713.395, 4568431.356, u'waterline18', 416713.395, 4568431.356, 36.835, u'checkantht', 141L, 142L, 1L, 0.0013567957, -0.0049196886, -16.3190302379, 1L, 2.62, 0L, 1.987e-05, 7.867386581e-06, 1.0878642699e-05, 69L, 71L, 53L, 4L, 2000L, 165L, 3L, 0.7506403219, 1.427773961, 7L, 7L, 0L, 0L, 0L, 0L, 36.835, NULL, u'runup19']
+[416595.32, 4568460.579, u'waterline57', 416595.32, 4568460.579, 36.695, u'checkantht', 180L, 181L, 1L, 0.0016077226, -0.0063321263, -16.4593526594, 1L, 2.62, 0L, 1.7570598845e-05, 7.550561505e-06, 9.725300978e-06, 64L, 66L, 54L, 4L, 2000L, 204L, 3L, 0.6989282709, 1.2810195169, 8L, 7L, 0L, 0L, 0L, 0L, 36.695, NULL, u'runup20']
+[416704.449, 4568435.615, u'waterline21', 416704.449, 4568435.615, 36.792, u'checkantht', 144L, 145L, 1L, 0.0013942191, -0.0050269831, -16.3616561253, 1L, 2.62, 0L, 1.8305554523e-05, 6.245838003e-06, 1.0537917284e-05, 66L, 70L, 52L, 4L, 2000L, 168L, 3L, 0.704465817, 1.3501885405, 7L, 8L, 0L, 0L, 0L, 0L, 36.792, NULL, u'runup21']
+[416585.396, 4568461.87, u'waterline60', 416585.396, 4568461.87, 36.625, u'checkantht', 183L, 184L, 1L, 0.0016183258, -0.0064506733, -16.5292593463, 1L, 2.62, 0L, 1.7719258079e-05, 1.0783e-05, 1.0120885242e-05, 68L, 70L, 62L, 4L, 2000L, 207L, 3L, 0.7779842174, 1.4296678671, 8L, 6L, 0L, 0L, 0L, 0L, 36.625, NULL, u'runup22']
+[416694.58, 4568438.205, u'waterline24', 416694.58, 4568438.205, 36.763, u'checkantht', 147L, 148L, 1L, 0.0014165191, -0.0051450481, -16.3910957254, 1L, 2.62, 0L, 1.798519267e-05, 6.020611172e-06, 1.0428719194e-05, 65L, 70L, 51L, 4L, 2000L, 171L, 3L, 0.7037989494, 1.3474925762, 7L, 8L, 0L, 0L, 0L, 0L, 36.763, NULL, u'runup23']
+n = 1
+for feature in layer.selectedFeatures():
+	attrs = feature.attributes()
+	attrs[-1] = 'runup' + str(n)
+	n += 1
+for feature in layer.selectedFeatures():
+	attrs = feature.attributes()
+	attrs[-1] = 'runup'
+features = layer.getFeatures()
+layer.startEditing()
+True
+for feature in features:
+	layer.changeAttributeValue(feature.id(), -1, 'runup')
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+test = [416694.58, 4568438.205, u'waterline24', 416694.58, 4568438.205, 36.763, u'checkantht', 147L, 148L, 1L, 0.0014165191, -0.0051450481, -16.3910957254, 1L, 2.62, 0L, 1.798519267e-05, 6.020611172e-06, 1.0428719194e-05, 65L, 70L, 51L, 4L, 2000L, 171L, 3L, 0.7037989494, 1.3474925762, 7L, 8L, 0L, 0L, 0L, 0L, 36.763, NULL, u'runup23']
+test.index(u'runup23')
+36
+for feature in features:
+	layer.changeAttributeValue(feature.id(), 37, 'runup')
+layer.startEditing()
+True
+for feature in features:
+	layer.changeAttributeValue(feature.id(), 37, 'runup')
+layer.commitChanges()
+True
+layer.name()
+u'20170328_Profile_Shoreline_wGNSSraw_ITRF96'
+for feature in features:
+	layer.changeAttributeValue(feature.id(), 37, 'runup')
+	layer.updateFeature(feature)
+layer.startEditing()
+True
+for feature in features:
+	layer.changeAttributeValue(feature.id(), 37, 'runup')
+	layer.updateFeature(feature)
+layer.commitChanges()
+True
+prov = layer.dataProvider()
+prov.fieldNameIndex('Test')
+37
+for feature in features:
+	layer.startEditing()
+	layer.changeAttributeValue(feature.id(), 37, 'runup')
+	layer.commitChanges()
+layer.startEditing()
+True
+for feature in features:
+	feature.changeAttribute(37, 'runup')
